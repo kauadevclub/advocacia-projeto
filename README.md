@@ -3,7 +3,7 @@
 Este é um site desenvolvido como projeto de portfólio, com foco em um modelo profissional para escritórios de advocacia ou advogados autônomos. O objetivo é demonstrar minhas habilidades na criação de interfaces modernas, funcionais e responsivas para diferentes nichos profissionais.
 
 ## 🔗 Visualizar o site
-👉 [https://kauadevclub.github.io/meusite-advogacia/)
+👉 [https://kauadevclub.github.io/advocacia-projeto/)
 
 ---
 
