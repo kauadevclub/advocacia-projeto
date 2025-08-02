@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Leonardo Monteiro - Advogado Civil, Trabalhista e Previdenciário</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Merriweather', serif;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #1e3a8a;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .practice-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(30, 58, 138, 0.2);
+        }
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+        }
+        .hero-overlay {
+            background-color: rgba(30, 58, 138, 0.7);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center text-white font-bold text-xl mr-3">LM</div>
+                <div>
+                    <h1 class="text-blue-900 font-bold text-xl">Dr. Leonardo Monteiro</h1>
+                    <p class="text-gray-500 text-xs">OAB/SP 123456</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-blue-900 font-medium hover:text-blue-700">Início</a>
+                <a href="#practice" class="nav-link text-blue-900 font-medium hover:text-blue-700">Áreas de Atuação</a>
+                <a href="#about" class="nav-link text-blue-900 font-medium hover:text-blue-700">Sobre</a>
+                <a href="#testimonials" class="nav-link text-blue-900 font-medium hover:text-blue-700">Depoimentos</a>
+                <a href="#contact" class="nav-link text-blue-900 font-medium hover:text-blue-700">Contato</a>
+            </nav>
+            
+            <a href="#contact" class="hidden md:block bg-blue-900 hover:bg-blue-800 text-white px-6 py-2 rounded-md font-medium transition duration-300 btn-cta">
+                Agendar Consulta
+            </a>
+            
+            <button id="mobile-menu-button" class="md:hidden text-blue-900">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white w-full px-4 pb-4 shadow-lg">
+            <div class="flex flex-col space-y-3">
+                <a href="#home" class="text-blue-900 font-medium py-2 border-b border-gray-100">Início</a>
+                <a href="#practice" class="text-blue-900 font-medium py-2 border-b border-gray-100">Áreas de Atuação</a>
+                <a href="#about" class="text-blue-900 font-medium py-2 border-b border-gray-100">Sobre</a>
+                <a href="#testimonials" class="text-blue-900 font-medium py-2 border-b border-gray-100">Depoimentos</a>
+                <a href="#contact" class="text-blue-900 font-medium py-2 border-b border-gray-100">Contato</a>
+                <a href="#contact" class="bg-blue-900 text-white px-4 py-2 rounded-md font-medium text-center">
+                    Agendar Consulta
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-24 pb-16 md:pt-32 md:pb-24 h-screen flex items-center">
+        <div class="absolute inset-0 bg-blue-900 hero-overlay">
+            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                 alt="Escritório de advocacia" class="w-full h-full object-cover">
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10 text-white" data-aos="fade-up">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Dr. Leonardo Monteiro</h1>
+                <p class="text-xl md:text-2xl mb-6 italic">"Compromisso com a justiça, dedicação com o cliente."</p>
+                <p class="text-lg mb-8">Advogado especializado em Direito Civil, Trabalhista e Previdenciário com mais de 15 anos de experiência defendendo os direitos dos clientes.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="bg-white text-blue-900 hover:bg-gray-100 px-8 py-3 rounded-md font-bold text-center transition duration-300 btn-cta">
+                        Agende sua consulta
+                    </a>
+                    <a href="https://wa.me/5511999999999" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-md font-bold text-center transition duration-300">
+                        <i class="fab fa-whatsapp mr-2"></i> Fale pelo WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Areas -->
+    <section id="practice" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4">Áreas de Atuação</h2>
+                <div class="w-20 h-1 bg-blue-900 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Especializado nas seguintes áreas do Direito, oferecendo soluções jurídicas personalizadas para cada caso.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Civil Law -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md transition duration-300 practice-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-900 mb-6 mx-auto">
+                        <i class="fas fa-balance-scale text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4 text-center">Direito Civil</h3>
+                    <p class="text-gray-600 mb-4">Atuação em diversas questões do direito civil, incluindo:</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-900 mr-2 mt-1"></i>
+                            <span>Contratos e obrigações</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-900 mr-2 mt-1"></i>
+                            <span>Responsabilidade civil</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-900 mr-2 mt-1"></i>
+                            <span>Direito das coisas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-900 mr-2 mt-1"></i>
+                            <span>Direito de família</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-900 mr-2 mt-1"></i>
+                            <span>Indenizações</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Labor Law -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md transition duration-300 practice-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-900 mb-6 mx-auto">
+                        <i class="fas fa-briefcase text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4 text-center">Direito Trabalhista</h3>
+                    <p class="text-gray-600 mb-4">Defesa dos direitos trabalhistas em todas as instâncias:</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-900 mr-2 mt-1"></i>
+                            <span>Rescisão contratual</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-900 mr-2 mt-1"></i>
+                            <span>Assédio moral</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-900 mr-2 mt-1"></i>
+                            <span>Horas extras</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-900 mr-2 mt-1"></i>
+                            <span>Acidente de trabalho</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-900 mr-2 mt-1"></i>
+                            <span>Reclamação trabalhista</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Social Security Law -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md transition duration-300 practice-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-900 mb-6 mx-auto">
+                        <i class="fas fa-hand-holding-heart text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4 text-center">Direito Previdenciário</h3>
+                    <p class="text-gray-600 mb-4">Atuação em questões relacionadas à Previdência Social:</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-900 mr-2 mt-1"></i>
+                            <span>Aposentadorias</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-900 mr-2 mt-1"></i>
+                            <span>Auxílio-doença</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-900 mr-2 mt-1"></i>
+                            <span>Pensão por morte</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-900 mr-2 mt-1"></i>
+                            <span>Revisão de benefícios</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-900 mr-2 mt-1"></i>
+                            <span>BPC/LOAS</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Dr. Leonardo Monteiro" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+                
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6">Sobre o Dr. Leonardo Monteiro</h2>
+                    <div class="w-20 h-1 bg-blue-900 mb-6"></div>
+                    
+                    <p class="text-gray-600 mb-4">Advogado formado pela Faculdade de Direito da Universidade de São Paulo (USP) com especializações em Direito Civil e Processo Civil pela PUC-SP.</p>
+                    <p class="text-gray-600 mb-4">Com mais de 15 anos de experiência, atuou em grandes escritórios de advocacia antes de fundar seu próprio escritório, dedicado a oferecer um atendimento personalizado e humanizado.</p>
+                    <p class="text-gray-600 mb-6">Membro da Comissão de Direito Civil da OAB/SP e palestrante em diversos eventos jurídicos, sempre buscando atualização para oferecer o melhor serviço aos clientes.</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-graduation-cap text-blue-900"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-900">Formação</h4>
+                                <p class="text-gray-600 text-sm">USP - Pós em Direito Civil</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-award text-blue-900"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-900">Experiência</h4>
+                                <p class="text-gray-600 text-sm">15+ anos atuando</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-briefcase text-blue-900"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-900">Casos</h4>
+                                <p class="text-gray-600 text-sm">500+ casos resolvidos</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-handshake text-blue-900"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-900">Filosofia</h4>
+                                <p class="text-gray-600 text-sm">Ética e transparência</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="inline-block bg-blue-900 hover:bg-blue-800 text-white px-6 py-3 rounded-md font-medium transition duration-300 btn-cta">
+                        Entre em contato
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4">Depoimentos de Clientes</h2>
+                <div class="w-20 h-1 bg-blue-900 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Veja o que nossos clientes têm a dizer sobre nosso trabalho e dedicação em cada caso.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md transition duration-300 testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-900 font-bold mr-4">AM</div>
+                        <div>
+                            <h4 class="font-bold text-blue-900">Ana Maria Silva</h4>
+                            <p class="text-gray-500 text-sm">Direito Trabalhista</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-4">"O Dr. Leonardo foi incansável na defesa dos meus direitos trabalhistas. Conseguiu uma indenização que superou minhas expectativas. Profissional competente e atencioso."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md transition duration-300 testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-900 font-bold mr-4">CR</div>
+                        <div>
+                            <h4 class="font-bold text-blue-900">Carlos Roberto</h4>
+                            <p class="text-gray-500 text-sm">Direito Previdenciário</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-4">"Depois de ter meu pedido de aposentadoria negado três vezes, o Dr. Leonardo conseguiu a aprovação em tempo recorde. Explica tudo com clareza e está sempre disponível para tirar dúvidas."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md transition duration-300 testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-900 font-bold mr-4">JM</div>
+                        <div>
+                            <h4 class="font-bold text-blue-900">Juliana Mendes</h4>
+                            <p class="text-gray-500 text-sm">Direito Civil</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-4">"Excelente profissional! Me auxiliou em um processo de divórcio complicado com muita sensibilidade e competência. Recomendo a todos que precisam de um advogado sério e comprometido."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-blue-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-4">Entre em Contato</h2>
+                <div class="w-20 h-1 bg-white mx-auto mb-6"></div>
+                <p class="max-w-2xl mx-auto">Agende uma consulta ou tire suas dúvidas. Estamos à disposição para ajudá-lo.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12" data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-6">Informações de Contato</h3>
+                    
+                    <div class="mb-8">
+                        <div class="flex items-start mb-6">
+                            <div class="bg-blue-800 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Escritório</h4>
+                                <p>Av. Paulista, 1000 - 10º andar<br>São Paulo - SP, 01310-100</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="bg-blue-800 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Telefone</h4>
+                                <p>(11) 9999-9999</p>
+                                <p>Atendimento: Seg-Sex, 9h-18h</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="bg-blue-800 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Email</h4>
+                                <p>contato@leonardomonteiro.adv.br</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4 class="font-bold mb-4">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-blue-800 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="bg-blue-800 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-blue-800 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://wa.me/5511999999999" class="bg-blue-800 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-8 bg-blue-800 p-6 rounded-lg">
+                        <h4 class="font-bold mb-4">Horário de Funcionamento</h4>
+                        <ul class="space-y-2">
+                            <li class="flex justify-between border-b border-blue-700 pb-2">
+                                <span>Segunda - Sexta</span>
+                                <span>09:00 - 18:00</span>
+                            </li>
+                            <li class="flex justify-between border-b border-blue-700 pb-2">
+                                <span>Sábado</span>
+                                <span>09:00 - 12:00</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Domingo</span>
+                                <span>Fechado</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-6">Envie uma Mensagem</h3>
+                    
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label for="name" class="block mb-2">Nome Completo</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded bg-blue-800 border border-blue-700 focus:outline-none focus:ring-2 focus:ring-white" required>
+                            <p id="name-error" class="text-red-300 text-sm mt-1 hidden">Por favor, insira seu nome</p>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded bg-blue-800 border border-blue-700 focus:outline-none focus:ring-2 focus:ring-white" required>
+                            <p id="email-error" class="text-red-300 text-sm mt-1 hidden">Por favor, insira um email válido</p>
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block mb-2">Telefone</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded bg-blue-800 border border-blue-700 focus:outline-none focus:ring-2 focus:ring-white" required>
+                            <p id="phone-error" class="text-red-300 text-sm mt-1 hidden">Por favor, insira um telefone válido</p>
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block mb-2">Assunto</label>
+                            <select id="subject" name="subject" class="w-full px-4 py-3 rounded bg-blue-800 border border-blue-700 focus:outline-none focus:ring-2 focus:ring-white" required>
+                                <option value="" disabled selected>Selecione um assunto</option>
+                                <option value="civil">Direito Civil</option>
+                                <option value="trabalhista">Direito Trabalhista</option>
+                                <option value="previdenciario">Direito Previdenciário</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block mb-2">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded bg-blue-800 border border-blue-700 focus:outline-none focus:ring-2 focus:ring-white" required></textarea>
+                            <p id="message-error" class="text-red-300 text-sm mt-1 hidden">Por favor, insira sua mensagem</p>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-white text-blue-900 hover:bg-gray-200 px-6 py-3 rounded-md font-bold transition duration-300">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                    
+                    <div id="success-message" class="hidden mt-4 p-4 bg-green-600 rounded-lg">
+                        <p>Mensagem enviada com sucesso! Entraremos em contato em breve.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <div class="h-96 w-full">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0754267452926!2d-46.6534269246876!3d-23.5657343617489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1689870114991!5m2!1spt-BR!2sbr" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center text-white font-bold text-xl mr-3">LM</div>
+                        <div>
+                            <h3 class="text-white font-bold text-xl">Dr. Leonardo Monteiro</h3>
+                            <p class="text-sm">OAB/SP 123456</p>
+                        </div>
+                    </div>
+                    <p class="max-w-xs">Advogado especializado em Direito Civil, Trabalhista e Previdenciário com atendimento personalizado e humanizado.</p>
+                </div>
+                
+                <div class="mb-8 md:mb-0">
+                    <h4 class="text-white font-bold mb-4 text-lg">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-white transition duration-300">Início</a></li>
+                        <li><a href="#practice" class="hover:text-white transition duration-300">Áreas de Atuação</a></li>
+                        <li><a href="#about" class="hover:text-white transition duration-300">Sobre</a></li>
+                        <li><a href="#testimonials" class="hover:text-white transition duration-300">Depoimentos</a></li>
+                        <li><a href="#contact" class="hover:text-white transition duration-300">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="mb-8 md:mb-0">
+                    <h4 class="text-white font-bold mb-4 text-lg">Contato</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-2 mt-1"></i>
+                            <span>Av. Paulista, 1000 - São Paulo/SP</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mr-2 mt-1"></i>
+                            <span>(11) 9999-9999</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mr-2 mt-1"></i>
+                            <span>contato@leonardomonteiro.adv.br</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-lg">Newsletter</h4>
+                    <p class="mb-4">Assine nossa newsletter para receber informações jurídicas.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Seu email" class="px-4 py-2 rounded-l bg-gray-800 text-white focus:outline-none focus:ring-1 focus:ring-blue-500 w-full">
+                        <button type="submit" class="bg-blue-900 hover:bg-blue-800 px-4 py-2 rounded-r text-white">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2023 Dr. Leonardo Monteiro - Todos os direitos reservados</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition duration-300">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition duration-300">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/5511999999999" class="hover:text-white transition duration-300">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Form Validation
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let isValid = true;
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            const phone = document.getElementById('phone');
+            const message = document.getElementById('message');
+            
+            // Reset errors
+            document.querySelectorAll('[id$="-error"]').forEach(el => el.classList.add('hidden'));
+            
+            // Validate name
+            if (name.value.trim() === '') {
+                document.getElementById('name-error').classList.remove('hidden');
+                isValid = false;
+            }
+            
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value)) {
+                document.getElementById('email-error').classList.remove('hidden');
+                isValid = false;
+            }
+            
+            // Validate phone (basic validation)
+            const phoneRegex = /^[0-9]{10,11}$/;
+            if (!phoneRegex.test(phone.value.replace(/\D/g, ''))) {
+                document.getElementById('phone-error').classList.remove('hidden');
+                isValid = false;
+            }
+            
+            // Validate message
+            if (message.value.trim() === '') {
+                document.getElementById('message-error').classList.remove('hidden');
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // Here you would typically send the form data to a server
+                // For demo purposes, we'll just show a success message
+                document.getElementById('success-message').classList.remove('hidden');
+                this.reset();
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    document.getElementById('success-message').classList.add('hidden');
+                }, 5000);
+            }
+        });
+
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
